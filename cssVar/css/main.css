@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+body::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  height: var(--y);
+  width: var(--x);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+/*# sourceMappingURL=main.css.map */
