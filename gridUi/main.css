@@ -1,0 +1,57 @@
+body,
+html {
+	height: 100vh;
+}
+/* Mobile First  */
+body {
+	margin: 0;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-auto-rows: repeat(auto, 5);
+	grid-template-areas: "section1" "section2" "section3" "main" "footer";
+}
+
+aside {
+	grid-area: sidebar;
+	background-color: #007ff0;
+}
+
+header {
+	grid-area: header;
+	background-color: #91c8ff;
+}
+
+section:nth-of-type(1) {
+	grid-area: section1;
+	background-color: #b3d8fd;
+}
+section:nth-of-type(2) {
+	grid-area: section2;
+	background-color: #5386af;
+}
+section:nth-of-type(3) {
+	grid-area: section3;
+	background-color: #6d9fd2;
+}
+
+main {
+	grid-area: main;
+	background-color: #7da9d5;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #588ec3;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+	body {
+		margin: 0;
+		display: grid;
+		grid-template-columns: auto 27% 27% 27%;
+		grid-auto-rows: 8% 30% auto 10%;
+		grid-template-areas: "sidebar header header header" "sidebar section1 section2 section3" "sidebar main main main"
+			"sidebar footer footer footer";
+	}
+}
